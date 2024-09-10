@@ -34,6 +34,7 @@ boxes.forEach((box)=>{
            box.innerText="O";
            turnO=false; 
         }else{
+            box.classList.add("dlueeo");
             box.innerText="X";
            turnO=true;
         }
@@ -51,6 +52,7 @@ const enableBoxes=()=>{
     for(let box of boxes){
         box.disabled=false;
         box.innerText="";
+        gDiv.classList.remove("hide");
     }
 };
 
@@ -76,9 +78,7 @@ const checkWinner=()=>{
 
             }
         }
-
     }
-
 }
 
 resetBtn.addEventListener("click",resetGame);
